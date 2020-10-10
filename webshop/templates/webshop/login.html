@@ -1,0 +1,16 @@
+{% extends 'webshop/__base__.html' %}
+{% block content %}
+    <h2>zaloguj sie</h2>
+    <form method="post">{% csrf_token %}
+        {{ form.errors }}
+        <div>
+            {{ form.username.errors }}
+            {{ form.username }}
+        </div>
+        <div>
+            {{ form.password.errors }}
+            {{ form.password }}
+        </div>
+        <button type="submit">Zaloguj sie</button>
+    </form>
+{% endblock %}
