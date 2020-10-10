@@ -116,6 +116,13 @@ USE_TZ = True
 STATIC_URL = 'webshop/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'webshop/static')
 
+# Required after creating User model in app models
+AUTH_USER_MODEL = 'webshop.User'
+
+# Login and logout redirections
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
 
 try:
     from webshopProject.local_settings import DATABASES
